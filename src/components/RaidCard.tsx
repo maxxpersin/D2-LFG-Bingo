@@ -1,0 +1,49 @@
+import { RaidTypes } from "../shared/enums/RaidTypes"
+import { MapRaidTypeToRoute } from "../shared/functions/MapRaidTypeToRoute"
+import VOG from "../assets/vog-thumbnail.jpg";
+import CROTA from "../assets/crota-thumbnail.jpg";
+import KF from "../assets/kf-thumbnail.jpg";
+import DSC from "../assets/dsc-thumbnail.jpg";
+import SAL from "../assets/sal-thumbnail.jpg";
+import VOW from "../assets/vow-thumbnail.jpg"
+import RON from "../assets/ron-thumbnail.jpg";
+import { routes } from "../shared/constants/Routes";
+
+function RaidCard(type: RaidTypes) {
+
+    const url: string = MapRaidTypeToRoute(type);
+    const img = GetImageForCard(url);
+
+    return (
+        <div className="card">
+            <img className="img-fluid" src={img} alt={url} />
+            <div className="card-body">
+                <div className="card-title">{type}</div>
+                <div className="card-text">
+                    <a type="button" href={url} className="btn btn-primary">Play LFG Bingo for {type}</a>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+function GetImageForCard(url: string) {
+    switch (url) {
+        case routes.VOG:
+            return VOG;
+        case routes.CROTA:
+            return CROTA;
+        case routes.KF:
+            return KF;
+        case routes.DSC:
+            return DSC;
+        case routes.SAL:
+            return SAL;
+        case routes.VOW:
+            return VOW;
+        case routes.RON:
+            return RON;
+    }
+}
+
+export default RaidCard
