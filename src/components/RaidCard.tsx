@@ -14,6 +14,7 @@ function RaidCard(type: RaidTypes) {
 
     const url: string = MapRaidTypeToRoute(type);
     const img = GetImageForCard(url);
+    console.log(url)
 
     return (
         <div className="card">
@@ -21,7 +22,7 @@ function RaidCard(type: RaidTypes) {
             <div className="card-body">
                 <div className="card-title">{type}</div>
                 <div className="card-text">
-                    <Link type="button" to={url} className="btn btn-primary">Play LFG Bingo for {type}</Link>
+                    <Link type="button" to={`/${url}`} className="btn btn-primary">Play LFG Bingo for {type}</Link>
                 </div>
             </div>
         </div>
