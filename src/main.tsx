@@ -2,13 +2,13 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import 'bootstrap/dist/css/bootstrap.css'
-import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, createHashRouter, Navigate, RouterProvider } from 'react-router-dom';
 import RaidList from './components/RaidList';
 import { routes } from './shared/constants/Routes';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/d2-lfg-bingo",
     element: <App />,
     children: [
       { // Surely theres a better way to do this
