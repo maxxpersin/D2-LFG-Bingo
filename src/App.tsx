@@ -1,14 +1,18 @@
-import { Outlet } from 'react-router-dom';
+import { HashRouter, Navigate, Outlet, Route, Routes } from 'react-router-dom';
 import './App.css'
 import Navbar from './components/Navbar';
 import RaidList from './components/RaidList';
+import { routes } from './shared/constants/Routes';
 
 function App() {
   return (
-    <div>
+    <HashRouter basename="/">
       {Navbar()}
-      <Outlet />
-    </div>
+      <Routes>
+        <Route path="home" element={<RaidList />} />
+        <Route path="*" element={<Navigate to={routes.home} />} />
+      </Routes>
+    </HashRouter>
   );
 }
 

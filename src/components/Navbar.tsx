@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+import { routes } from "../shared/constants/Routes"
 
 function Navbar() {
     return (
@@ -7,7 +9,7 @@ function Navbar() {
                 <div className="collapse navbar-collapse">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a href="home" className="nav-link">Home</a>
+                            <Link to={routes.home} className="nav-link">Home</Link>
                         </li>
                     </ul>
                 </div>

@@ -8,6 +8,7 @@ import SAL from "../assets/sal-thumbnail.jpg";
 import VOW from "../assets/vow-thumbnail.jpg"
 import RON from "../assets/ron-thumbnail.jpg";
 import { routes } from "../shared/constants/Routes";
+import { Link } from "react-router-dom";
 
 function RaidCard(type: RaidTypes) {
 
@@ -20,7 +21,7 @@ function RaidCard(type: RaidTypes) {
             <div className="card-body">
                 <div className="card-title">{type}</div>
                 <div className="card-text">
-                    <a type="button" href={url} className="btn btn-primary">Play LFG Bingo for {type}</a>
+                    <Link type="button" to={url} className="btn btn-primary">Play LFG Bingo for {type}</Link>
                 </div>
             </div>
         </div>
