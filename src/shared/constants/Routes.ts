@@ -1,4 +1,4 @@
-export const routes = {
+export const routes: any = {
     home: 'home',
     DSC: 'DSC',
     VOG: 'VOG',
@@ -6,5 +6,5 @@ export const routes = {
     RON: 'RON',
     SAL: 'SAL',
     KF: 'KF',
-    VOW: 'VOW'
+    VOW: 'VOW',
 };

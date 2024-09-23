@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom"
-import { routes } from "../shared/constants/Routes"
+import { Link } from 'react-router-dom';
+import { routes } from '../shared/constants/Routes';
 
 function Navbar() {
     return (
@@ -9,13 +9,15 @@ function Navbar() {
                 <div className="collapse navbar-collapse">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <Link to={routes.home} className="nav-link">Home</Link>
+                            <Link to={routes.home} className="nav-link">
+                                Home
+                            </Link>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-    )
+    );
 }
 
-export default Navbar
+export default Navbar;

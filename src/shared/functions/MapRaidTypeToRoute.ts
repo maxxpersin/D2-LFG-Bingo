@@ -1,22 +1,22 @@
-import { routes } from "../constants/Routes";
-import { RaidTypes } from "../enums/RaidTypes";
+import { routes } from '../constants/Routes';
+import { raidTypes } from '../enums/RaidTypes';
 
-export function MapRaidTypeToRoute(type: RaidTypes) {
+export function mapRaidTypeToRoute(type: raidTypes) {
     // This shit is so ugly and stupid, fix later
     switch (type) {
-        case RaidTypes.CROTA:
+        case raidTypes.CROTA:
             return routes.CROTA;
-        case RaidTypes.DSC:
+        case raidTypes.DSC:
             return routes.DSC;
-        case RaidTypes.KF:
+        case raidTypes.KF:
             return routes.KF;
-        case RaidTypes.RON:
+        case raidTypes.RON:
             return routes.RON;
-        case RaidTypes.SAL:
+        case raidTypes.SAL:
             return routes.SAL;
-        case RaidTypes.VOG:
+        case raidTypes.VOG:
             return routes.VOG;
-        case RaidTypes.VOW:
+        case raidTypes.VOW:
             return routes.VOW;
     }
 }
